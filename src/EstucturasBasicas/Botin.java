@@ -5,9 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 public class Botin {
     public static void main(String[] args) {
-        // Ejemplo de datos iniciales
         int participantes = 3;
-        int[] billetes = {10, 20, 50, 200, 500};
+        int[] billetes = {3, 50, 20, 100, 200, 500, 10, 50};
 
         // Repartir los billetes
         Map<Integer, ArrayList<Integer>> resultado = repartirBilletes(participantes, billetes);
