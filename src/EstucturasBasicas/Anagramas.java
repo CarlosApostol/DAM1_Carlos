@@ -4,52 +4,46 @@ import java.io.*;
 import java.util.*;
 public class Anagramas {
     public static void main(String[] args) throws IOException {
-        // Número mínimo de palabras para imprimir (ejemplo: 10)
         int minGroupSize = 10;
+        String resultado = EncuentraAnagrama(minGroupSize);
 
-        // Llamada al método que busca anagramas
-        String result = findAnagrams(minGroupSize);
-
-        // Imprime los grupos de anagramas que cumplen el tamaño mínimo
-        System.out.println(result);
+        System.out.println(resultado);
     }
 
-    public static String findAnagrams(int minGroupSize) throws IOException {
+    public static String EncuentraAnagrama(int minGroupSize) throws IOException {
         StringBuilder sb = new StringBuilder();
 
-        // Mapa para almacenar las palabras ordenadas y sus anagramas
+        //Mapa para almacenar las palabras ordenadas y sus anagramas
         Map<String, List<String>> anagramMap = new HashMap<>();
 
-        BufferedReader reader = null;
+        BufferedReader leer = null;
         try {
-            reader = new BufferedReader(new FileReader("/home/carapo2/IdeaProjects/java/src/EstucturasBasicas/anagramasXD.txt"));
-            String word;
+            leer = new BufferedReader(new FileReader("/home/carapo2/IdeaProjects/java/src/EstucturasBasicas/anagramasXD.txt"));
+            String palabra;
 
-            // Lee cada palabra del archivo
-            while ((word = reader.readLine()) != null) {
-                // Ordena las letras de la palabra
-                String sortedWord = sortLetters(word);
+            //Lee cada palabra del archivo
+            while ((palabra = leer.readLine()) != null) {
+                String PalabraOrd = Alfabet(palabra);
 
-                // Recupera la lista de anagramas o crea una nueva si no existe
-                List<String> anagramList = anagramMap.get(sortedWord);
+                //Recupera la lista de anagramas o crea una nueva si no existe
+                List<String> anagramList = anagramMap.get(PalabraOrd);
                 if (anagramList == null) {
                     anagramList = new ArrayList<>();
-                    anagramMap.put(sortedWord, anagramList);
+                    anagramMap.put(PalabraOrd, anagramList);
                 }
 
-                // Añade la palabra a la lista de anagramas
-                anagramList.add(word);
+                anagramList.add(palabra);
             }
         } catch (IOException e) {
-            e.printStackTrace(); // Muestra el error en caso de fallo al leer el archivo
-            System.exit(1); // Termina el programa si hay un error
+            e.printStackTrace(); //Mostrara el error en caso de fallo al leer el archivo y terminara el programa si hay un error
+            System.exit(1);
         } finally {
-            if (reader != null) {
-                reader.close(); // Cierra el archivo
+            if (leer != null) {
+                leer.close();
             }
         }
 
-        // Recorre el mapa y añade a la salida aquellos grupos que cumplen el tamaño mínimo
+        //Esto ecorre el mapa y añade a la salida aquellos grupos que cumplen el tamaño mínimo (importante) -->
         for (List<String> anagramList : anagramMap.values()) {
             if (anagramList.size() >= minGroupSize) {
                 sb.append(anagramList.size()).append(": ").append(anagramList).append("\n");
@@ -59,8 +53,8 @@ public class Anagramas {
         return sb.toString();
     }
 
-    // Método para ordenar las letras de una palabra alfabéticamente
-    private static String sortLetters(String word) {
+    //Metodo que orcdena alfabeticamente
+    private static String Alfabet(String word) {
         char[] charArray = word.toCharArray();
         Arrays.sort(charArray);
         return new String(charArray);
