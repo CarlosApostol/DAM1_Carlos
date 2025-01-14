@@ -27,7 +27,7 @@ public class Parentesis {
             }
         }
         if (parentesis.isEmpty()) {
-            System.out.println("¡Todo correcto!");
+            System.out.println("¡Todo correcto, alhamdulillah!");
         } else {
             System.out.println("ERROR: la oración no está bien balanceada.");
         }
