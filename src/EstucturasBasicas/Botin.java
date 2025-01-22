@@ -3,7 +3,24 @@ package EstucturasBasicas;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-public class Botin {
+public class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Botin {
     public static void main(String[] args) {
         int participantes = 3;
         int[] billetes = {3, 50, 20, 100, 200, 500, 10, 50};

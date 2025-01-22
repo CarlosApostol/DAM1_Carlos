@@ -11,7 +11,7 @@ public class Ejercicio4 {
         int numero = 0;
 
         do {
-            System.out.println("Dame un numero:");
+            System.out.println("Dame un numero (introduce un negativo para terminar):");
             numero = sc.nextInt();
             numeros.add(numero);
         }while(numero >= 0);

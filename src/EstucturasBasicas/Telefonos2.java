@@ -20,15 +20,15 @@ public class Telefonos2 {
         ArrayList<String> telefonos = new ArrayList<>();
         telefonos.add("421421421");
         telefonos.add("+0034 440021");
-        agenda.put("Tony", String.valueOf(telefonos));
+        agenda.put("tony", String.valueOf(telefonos));
         telefonos = new ArrayList<>();
         telefonos.add("643643643");
         telefonos.add("+0034 676869");
-        agenda.put("Alex", String.valueOf(telefonos));
+        agenda.put("alex", String.valueOf(telefonos));
         telefonos = new ArrayList<>();
         telefonos.add("976786576");
         telefonos.add("+0034 999999");
-        agenda.put("Gabriel", String.valueOf(telefonos));
+        agenda.put("gabriel", String.valueOf(telefonos));
         return agenda;
     }
 }
