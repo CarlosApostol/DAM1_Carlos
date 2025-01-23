@@ -38,7 +38,6 @@ class aireacondicionado {
         if (this.temp + 1 <= this.max)
             this.temp++;
     }
-    //Este setter baja la temperatura
     public void down(){
         if (this.temp - 1 >= this.min)
             this.temp--;
