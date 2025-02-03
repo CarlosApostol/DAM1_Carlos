@@ -1,5 +1,6 @@
 package POO;
 import java.util.*;
+
 class Autor {
     String nombre;
     String fecha;
@@ -51,25 +52,18 @@ class Libro {
         return this.titulo;
     }
 
-    ;
-
     public Autor getAutor() {
         return this.autor;
     }
-
-    ;
 
     public int getAPagnum() {
         return this.pagnum;
     }
 
-    ;
-
     public String toString() {
         return "Titulo del libro: " + this.titulo + "\n\t" + "Autor del libro: " + this.autor + "\n\t" + "Numero de Paginas: " + this.pagnum + "\n\t" +"Tema del libro: "+this.temas;
     }
 }
-
 
 public class MainLibro{
         public static void main(String[] args) {
