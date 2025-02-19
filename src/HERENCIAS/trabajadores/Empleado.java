@@ -1,4 +1,4 @@
-package HERENCIAS;
+package HERENCIAS.trabajadores;
 
 public class Empleado {
     private String dni;

@@ -1,5 +1,4 @@
-package HERENCIAS;
-import java.util.*;
+package HERENCIAS.trabajadores;
 
 public class ProyectoTrabajadores {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package HERENCIAS;
+package HERENCIAS.trabajadores;
 
-public class Oficial extends Operario{
+public class Oficial extends Operario {
     Oficial(String dni, String nombre) {
         super(dni, nombre);
     }
